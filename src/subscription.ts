@@ -4,9 +4,9 @@ import categories from './categories';
 import globalGroups from './globalGroups';
 
 export default defineGkdSubscription({
-  id: 99810,
+  id: 998,
   name: 'Miz的GKD订阅',
-  version: 1,
+  version: 0,
   author: 'Miz',
   checkUpdateUrl: './gkd.version.json5',
   supportUri: 'https://github.com/Miztan/GKD-Subscription',
