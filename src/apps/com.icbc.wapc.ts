@@ -6,7 +6,7 @@ export default defineGkdApp({
   name: '工行企业手机银行',
   groups: [
     {
-      key: 9,
+      key: 0,
       name: '功能类-自动同意隐私协议',
       desc: '打开登录界面时自动同意隐私协议，可手动取消勾选',
       actionMaximum: 1,
@@ -23,7 +23,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 9,
+      key: 0,
       name: '功能类-自动确认使用蓝牙',
       desc: '登录U盾时自动点击确认使用蓝牙',
       rules: [
