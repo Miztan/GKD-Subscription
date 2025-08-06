@@ -23,7 +23,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 0,
+      key: 1,
       name: '功能类-自动确认使用蓝牙',
       desc: '登录U盾时自动点击确认使用蓝牙',
       rules: [
