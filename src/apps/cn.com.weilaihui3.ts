@@ -14,7 +14,7 @@ export default defineGkdApp({
         {
           fastQuery: true,
           activityIds: ['.app.ui.activity.HomeActivity'],
-          matches: '[id="cn.com.weilaihui3:id/btnConfirm"]',
+          matches: 'Button[id="cn.com.weilaihui3:id/btnConfirm"][text="确定"]',
           snapshotUrls: ['https://i.gkd.li/i/21622129'],
         },
       ],

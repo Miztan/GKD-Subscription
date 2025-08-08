@@ -14,7 +14,7 @@ export default defineGkdApp({
         {
           fastQuery: true,
           activityIds: ['com.icbc.mvp.ui.activity.login.UkeyLoginActivity'],
-          matches: '[id="com.icbc.wapc:id/cb_protocol"][checked=false]',
+          matches: 'CheckBox[id="com.icbc.wapc:id/cb_protocol"][checked=false]',
           snapshotUrls: [
             'https://i.gkd.li/i/21619807', // 未勾选协议
             'https://i.gkd.li/i/21619803', // 已勾选协议
@@ -30,7 +30,7 @@ export default defineGkdApp({
         {
           fastQuery: true,
           activityIds: ['com.icbc.mvp.ui.activity.login.UkeyLoginActivity'],
-          matches: '[id="com.icbc.wapc:id/tv_confirm"]',
+          matches: 'TextView[id="com.icbc.wapc:id/tv_confirm"][text="确定"]',
           snapshotUrls: ['https://i.gkd.li/i/21620984'],
         },
       ],
