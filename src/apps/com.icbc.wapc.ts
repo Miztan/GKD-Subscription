@@ -35,5 +35,72 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 2,
+      name: '功能类-登录提示自动确定',
+      desc: '自动点击登录后安全提示弹窗的确定按钮',
+      enable: true,
+      fastQuery: true,
+      rules: [
+        {
+          matches: [
+            '[text*="您上次于"][text*="安全中心"]',
+            '@Button[text="确定"]',
+          ],
+        },
+      ],
+    },
+    {
+      key: 3,
+      name: '功能类-指纹密码开通提示',
+      desc: '自动点击"以后再说"关闭指纹密码开通弹窗',
+      enable: true,
+      fastQuery: true,
+      resetMatch: 'app',
+      snapshotUrls: ['https://i.gkd.li/i/placeholder'], // 建议上传实际快照
+      rules: [
+        {
+          activityIds: ['com.icbc.mvp.ui.activity.login.UkeyLoginActivity'],
+          matches: [
+            '[text*="开启指纹密码"]', // 弹窗特征文本
+            '@TextView[text="以后再说"]', // 点击目标（左侧按钮）
+          ],
+        },
+      ],
+    },
+    {
+      key: 4,
+      name: '功能类-退出时切换用户',
+      desc: '在退出确认弹窗中点击蓝色链接"切换用户"',
+      enable: true,
+      fastQuery: true,
+      resetMatch: 'app',
+      rules: [
+        {
+          activityIds: ['com.icbc.main.MainActivity'],
+          matches: [
+            '[text*="是否安全退出工行企业手机银行"]', // 弹窗层级特征
+            '@TextView[text~="切换用户"]', // 正则精确匹配"切换用户"四个字
+          ],
+        },
+      ],
+    },
+    {
+      key: 5,
+      name: '功能类-退出时取消接收通知提示',
+      desc: '在退出确认弹窗中点击"取消"（不在此手机接收通知）',
+      enable: true,
+      fastQuery: true,
+      resetMatch: 'app',
+      rules: [
+        {
+          activityIds: ['com.icbc.main.MainActivity'], // 主界面
+          matches: [
+            '[text*="退出后您是否需要在"][text*="接收通知消息"]', // 弹窗特征文本
+            '@TextView[text="取消"]', // 点击"取消"按钮
+          ],
+        },
+      ],
+    },
   ],
 });
