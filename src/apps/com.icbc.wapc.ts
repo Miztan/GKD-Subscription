@@ -57,7 +57,6 @@ export default defineGkdApp({
       enable: true,
       fastQuery: true,
       resetMatch: 'app',
-      snapshotUrls: ['https://i.gkd.li/i/placeholder'], // 建议上传实际快照
       rules: [
         {
           activityIds: ['com.icbc.mvp.ui.activity.login.UkeyLoginActivity'],
